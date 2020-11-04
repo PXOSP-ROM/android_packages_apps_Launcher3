@@ -68,7 +68,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener {
+public class InvariantDeviceProfile implements SharedPreferences.OnSharedPreferenceChangeListener {
 
     public static final String TAG = "IDP";
     // We do not need any synchronization for this variable as its only written on UI thread.
@@ -175,7 +175,6 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
     private Context mContext;
 
     private final ArrayList<OnIDPChangeListener> mChangeListeners = new ArrayList<>();
-    private Context mContext;
 
     @VisibleForTesting
     public InvariantDeviceProfile() {
@@ -216,6 +215,8 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
             onConfigChanged(mContext, true);
         } else if (DeviceProfile.KEY_PHONE_OVERVIEW_GRID.equals(key)) {
             onConfigChanged(mContext, false);
+        } else if (KEY_SHOW_DESKTOP_LABELS.equals(key) || KEY_SHOW_DRAWER_LABELS.equals(key)) {
+            onConfigChanged(mContext);
         }
     }
 
@@ -303,13 +304,6 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
             return TYPE_TABLET;
         } else {
             return TYPE_PHONE;
-        }
-    }
-
-    @Override
-    public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
-        if (KEY_SHOW_DESKTOP_LABELS.equals(key) || KEY_SHOW_DRAWER_LABELS.equals(key)) {
-            onConfigChanged(mContext);
         }
     }
 
