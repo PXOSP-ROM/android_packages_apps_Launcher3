@@ -214,6 +214,8 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
             SystemUiProxy.INSTANCE.get(mContext).setTaskbarEnabled(enabled);
 
             onConfigChanged(mContext, true);
+        } else if (DeviceProfile.KEY_PHONE_OVERVIEW_GRID.equals(key)) {
+            onConfigChanged(mContext, false);
         }
     }
 
