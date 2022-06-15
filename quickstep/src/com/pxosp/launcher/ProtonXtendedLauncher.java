@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package co.aospa.launcher;
+package com.pxosp.launcher;
 
 import com.android.launcher3.uioverrides.QuickstepLauncher;
 import com.android.systemui.plugins.shared.LauncherOverlayManager;
 
-public class ParanoidLauncher extends QuickstepLauncher {
+public class ProtonXtendedLauncher extends QuickstepLauncher {
 
     @Override
     protected LauncherOverlayManager getDefaultOverlay() {

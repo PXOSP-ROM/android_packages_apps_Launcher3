@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package co.aospa.launcher;
+package com.pxosp.launcher;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
