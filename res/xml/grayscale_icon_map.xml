@@ -441,6 +441,9 @@
         drawable="@drawable/themed_icon_one_dm_plus"
         package="idm.internet.download.manager.plus" />
     <icon
+        drawable="@drawable/themed_icon_organic_maps"
+        package="app.organicmaps" />
+    <icon
         drawable="@drawable/themed_icon_microsoft_onedrive"
         package="com.microsoft.skydrive" />
     <icon
