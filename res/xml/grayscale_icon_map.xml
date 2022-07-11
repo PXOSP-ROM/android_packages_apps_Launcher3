@@ -468,6 +468,9 @@
         drawable="@drawable/themed_icon_gallery_go"
         package="com.google.android.apps.photosgo" />
     <icon
+        drawable="@drawable/themed_icon_gallery"
+        package="com.oneplus.gallery" />
+    <icon
         drawable="@drawable/themed_icon_picpay"
         package="com.picpay" />
     <icon
@@ -539,6 +542,9 @@
     <icon
         drawable="@drawable/themed_icon_recorder"
         package="com.google.android.apps.recorder" />
+    <icon
+        drawable="@drawable/themed_icon_recorder"
+        package="org.lineageos.recorder" />
     <icon
         drawable="@drawable/themed_icon_reddit"
         package="com.reddit.frontpage" />
